@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Aumenta a legibilidade do texto */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao header */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px; /* Adiciona padding aos links */
+    transition: background 0.3s; /* Transição suave para o fundo */
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Efeito hover */
+}
+
+#banner {
+    background: #f03838;
+    padding: 50px 0;
+    text-align: center;
+    color: #fff; /* Garante que o texto seja visível */
+}
+
+#destaque, #novidades, #galeria {
+    padding: 20px;
+    margin: 20px auto; /* Centraliza os blocos */
+    max-width: 800px; /* Limita a largura dos blocos */
+    text-align: center;
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    background: #f9f9f9; /* Fundo claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.destaques, .galeria-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+}
+
+.destaques div, .galeria-grid div {
+    margin: 10px; /* Margem entre os itens */
+    padding: 10px;
+    flex: 1 1 200px; /* Flexível, com largura mínima */
+    background: #fff; /* Fundo branco para os itens */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Cantos arredondados */
+    transition: transform 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.destaques div:hover, .galeria-grid div:hover {
+    transform: scale(1.05); /* Aumenta levemente o item ao passar o mouse */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Para um posicionamento mais controlado */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .destaques, .galeria-grid {
+        flex-direction: column; /* Empilha os itens em telas menores */
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column; /* Alinha verticalmente em telas pequenas */
+    }
+}
